@@ -1,0 +1,148 @@
+/* --- Global Styles & Design System --- */
+:root {
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+    --secondary-color: #10b981;
+    --danger-color: #ef4444;
+    --background-color: #f1f5f9; /* Slate-100 */
+    --card-bg: #ffffff;
+    --text-dark: #1e293b; /* Slate-800 */
+    --text-light: #64748b; /* Slate-500 */
+    --border-color: #e2e8f0; /* Slate-200 */
+    --shadow-color: rgba(100, 116, 139, 0.12);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-dark);
+}
+
+/* --- Main Layout --- */
+.page-container {
+    padding: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.page-header {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.page-subheader {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- Statistic Cards --- */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background-color: var(--card-bg);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px var(--shadow-color);
+}
+
+.stat-card-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.stat-card-icon.icon-primary { background-color: var(--primary-color); }
+.stat-card-icon.icon-secondary { background-color: var(--secondary-color); }
+.stat-card-icon.icon-danger { background-color: var(--danger-color); }
+
+.stat-card-info .value {
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.stat-card-info .label {
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
+
+/* --- Main Content Cards & Lists --- */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px var(--shadow-color);
+    border: 1px solid var(--border-color);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+    background-color: #f8fafc; /* Slate-50 */
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+.list-item:hover {
+    border-left: 4px solid var(--primary-color);
+    transform: translateX(5px);
+}
+
+/* --- Buttons & Forms --- */
+.btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 0.6rem 1.2rem; border: none; border-radius: 0.5rem;
+    font-size: 0.875rem; font-weight: 600; color: white;
+    cursor: pointer; text-decoration: none; transition: all 0.2s ease-in-out;
+}
+.btn-primary { background-color: var(--primary-color); }
+.btn-primary:hover { background-color: var(--primary-hover); }
+.delete-btn {
+    background: none; border: none; color: #9ca3af; cursor: pointer;
+    padding: 0.25rem; border-radius: 9999px; transition: all 0.3s ease;
+}
+.delete-btn:hover { color: var(--danger-color); background-color: #fee2e2; }
+
+.input-label { font-weight: 500; margin-bottom: 0.5rem; display: block; }
+.input-field {
+    width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color);
+    border-radius: 0.5rem; transition: all 0.3s ease;
+}
+.input-field:focus {
+    outline: none; border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
