@@ -34,3 +34,10 @@ A simple Task Manager web application built using PHP and SQLite that allows use
 1. Install XAMPP
 2. Start Apache
 3. Place project folder inside:
+
+
+
+// --- ADMIN CREDENTIALS ---
+define('ADMIN_USERNAME', 'admin');
+define('ADMIN_PASSWORD', 'password123');
+
