@@ -41,3 +41,9 @@ A simple Task Manager web application built using PHP and SQLite that allows use
 define('ADMIN_USERNAME', 'admin');
 define('ADMIN_PASSWORD', 'password123');
 
+
+
+APPLICATION IS LIVE ON:
+https://task-manager-7kfi.onrender.com/index.php
+
+
